@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10131a">
+  <meta name="description" content="Build, hear, and visualize layered polyrhythms in your browser.">
+  <title>Polyrhythm Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <h1><span class="title-primary">Polyrhythm</span> <span class="title-secondary">Generator</span></h1>
+    </header>
+
+    <section class="transport card" aria-label="Playback and tempo">
+      <button id="play-button" class="play-button" type="button" aria-label="Play rhythm">
+        <span class="play-icon">▶</span><span class="play-label">Play</span>
+      </button>
+      <div class="tempo-control">
+        <div class="control-heading"><label for="tempo">Tempo</label><output id="tempo-output">120 BPM</output></div>
+        <input id="tempo" type="range" min="40" max="240" value="120">
+        <div class="range-labels"><span>40</span><span>240</span></div>
+      </div>
+      <div class="measure-readout"><span>MEASURE</span><strong id="measure-time">2.00s</strong></div>
+      <button id="download-button" class="secondary-button" type="button">↓ Export WAV</button>
+    </section>
+
+    <div class="workspace">
+      <section class="editor-panel card">
+        <div class="section-heading visual-heading">
+          <div><p class="eyebrow">RHYTHM EDITOR</p><h2>Rhythm map</h2></div>
+          <div class="editor-actions">
+            <button id="add-track" class="text-button" type="button">＋ Add track</button>
+            <div class="segmented" role="group" aria-label="Visualization">
+              <button class="view-button active" data-view="timeline" type="button">Timeline</button>
+              <button class="view-button" data-view="clock" type="button">Clock</button>
+            </div>
+          </div>
+        </div>
+        <div class="map-toolbar">
+          <p class="map-helper">Click a beat marker to mute/unmute it.</p>
+          <div class="guide-options" role="group" aria-label="Subdivision guides">
+            <span>Guides</span>
+            <button class="guide-button active" data-guides="0" type="button">Off</button>
+            <button class="guide-button" data-guides="2" type="button">½</button>
+            <button class="guide-button" data-guides="4" type="button">¼</button>
+          </div>
+        </div>
+        <div id="visualization" class="visualization" aria-live="polite"></div>
+        <p id="track-limit" class="hint" hidden>Four tracks is the sweet spot for this instrument set.</p>
+      </section>
+    </div>
+
+    <footer><span>Everything runs locally in your browser.</span><span>4/4 · Web Audio · No account needed</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
