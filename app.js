@@ -27,7 +27,6 @@ let animationFrame;
 const elements = {
   tempo: document.querySelector("#tempo"),
   tempoOutput: document.querySelector("#tempo-output"),
-  measureTime: document.querySelector("#measure-time"),
   play: document.querySelector("#play-button"),
   addTrack: document.querySelector("#add-track"),
   trackLimit: document.querySelector("#track-limit"),
@@ -45,7 +44,6 @@ function measureSeconds() {
 
 function updateTempoDisplay() {
   elements.tempoOutput.textContent = `${state.bpm} BPM`;
-  elements.measureTime.textContent = `${measureSeconds().toFixed(2)}s`;
   const percent = (state.bpm - 40) / 200 * 100;
   elements.tempo.style.background = `linear-gradient(90deg, var(--accent) ${percent}%, #333946 ${percent}%)`;
 }

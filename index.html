@@ -23,19 +23,21 @@
         <input id="tempo" type="range" min="40" max="240" value="120">
         <div class="range-labels"><span>40</span><span>240</span></div>
       </div>
-      <div class="measure-readout"><span>MEASURE</span><strong id="measure-time">2.00s</strong></div>
       <button id="download-button" class="secondary-button" type="button">↓ Export WAV</button>
     </section>
 
     <div class="workspace">
       <section class="editor-panel card">
         <div class="section-heading visual-heading">
-          <div><p class="eyebrow">RHYTHM EDITOR</p><h2>Rhythm map</h2></div>
-          <div class="editor-actions">
-            <button id="add-track" class="text-button" type="button">＋ Add track</button>
-            <div class="segmented" role="group" aria-label="Visualization">
-              <button class="view-button active" data-view="timeline" type="button">Timeline</button>
-              <button class="view-button" data-view="clock" type="button">Clock</button>
+          <p class="eyebrow">RHYTHM EDITOR</p>
+          <div class="editor-heading-row">
+            <h2>Rhythm map</h2>
+            <div class="editor-actions">
+              <button id="add-track" class="text-button" type="button">＋ Add track</button>
+              <div class="segmented" role="group" aria-label="Visualization">
+                <button class="view-button active" data-view="timeline" type="button">Timeline</button>
+                <button class="view-button" data-view="clock" type="button">Clock</button>
+              </div>
             </div>
           </div>
         </div>
@@ -53,7 +55,7 @@
       </section>
     </div>
 
-    <footer><span>Everything runs locally in your browser.</span><span>4/4 · Web Audio · No account needed</span></footer>
+    <footer>Created by Jane Hong (UdonBytes)</footer>
   </main>
   <script src="app.js"></script>
 </body>
