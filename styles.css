@@ -199,6 +199,8 @@ footer { padding: 24px 3px 0; color: #5e6570; font-size: .67rem; text-align: cen
     padding: 0;
   }
   .clock-layout { grid-template-columns: 1fr; gap: 4px; padding-top: 8px; }
+  .clock { order: 1; }
+  .clock-track-list { order: 2; }
   .clock-track-list .inline-track-controls { padding: 8px 2px; }
   .clock-track-list .inline-track-head { min-height: 32px; }
   .clock-track-list .track-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

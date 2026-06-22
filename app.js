@@ -29,7 +29,6 @@ const elements = {
   tempoOutput: document.querySelector("#tempo-output"),
   play: document.querySelector("#play-button"),
   addTrack: document.querySelector("#add-track"),
-  trackLimit: document.querySelector("#track-limit"),
   visualization: document.querySelector("#visualization"),
   download: document.querySelector("#download-button"),
 };
@@ -95,7 +94,6 @@ function applyTypedBeatCount(input) {
 function renderVisualization() {
   elements.visualization.innerHTML = state.view === "timeline" ? timelineMarkup() : clockMarkup();
   elements.addTrack.hidden = state.tracks.length === TRACK_TYPES.length;
-  elements.trackLimit.hidden = state.tracks.length !== TRACK_TYPES.length;
   updateVisualization();
 }
 
